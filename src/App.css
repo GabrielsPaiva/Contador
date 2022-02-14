@@ -1,0 +1,40 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: none
+}
+.counter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: aqua;
+  width: 100%;
+  height: 100vh;
+}
+.buttons_box{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  width: 18%;
+  height: 6%;
+}
+.number{
+position: absolute;
+font-size: 55px;
+top: 36%;
+}
+.plus_button{
+  background: green;
+  width: 40%;
+}
+.plus_button:hover{
+  cursor: pointer;
+}
+.minus_button{
+  background: red;
+  width: 40%;
+}
+.minus_button:hover{
+  cursor: pointer;
+}
