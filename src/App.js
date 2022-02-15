@@ -7,28 +7,33 @@ export default class App extends React.Component {
   };
 
   add = () => {
-    if (this.state.number < 10) {
+    const number = this.state.number
+    if (number < 10) {
       this.setState({
-        number: this.state.number + 1,
+        number: number + 1,
       });
     }
   };
 
   remove = () => {
-    if (this.state.number > 0) {
+    const number = this.state.number
+    if (number > 0) {
       this.setState({
-        number: this.state.number - 1,
+        number: number - 1,
       });
     }
   };
 
   render() {
+    const number = this.state.number
+    const add = this.add
+    const remove = this.remove
     return (
       <div className="counter">
-        <h1 className="number"> {this.state.number} </h1>
+        <h1 className="number"> {number} </h1>
         <div className="buttons_box">
-          <button className="plus_button" onClick={this.add.bind(this)}>+</button>
-          <button className="minus_button" onClick={this.remove.bind(this)}>-</button>
+          <button className="plus_button" onClick={add}>+</button>
+          <button className="minus_button" onClick={remove}>-</button>
         </div>
       </div>
     );
